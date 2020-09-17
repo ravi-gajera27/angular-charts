@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <mat-slide-toggle [checked]="showLegend" (change)="toggle($event,'legend')">Show Legend</mat-slide-toggle>
+        </div>
+        <div class="row">
+            <mat-slide-toggle [checked]="gradient" (change)="toggle($event,'gradient')">Gradient</mat-slide-toggle>
+        </div>
+        <div class="row">
+            <mat-slide-toggle [checked]="showXAxisLabel" (change)="toggle($event,'xlabel')">Show X-Axis Label
+            </mat-slide-toggle>
+        </div>
+        <div class="row">
+            <mat-slide-toggle [checked]="showYAxisLabel" (change)="toggle($event,'ylabel')">Show Y-Axis Label
+            </mat-slide-toggle>
+        </div>
+    </div>
+    <div class="col-8">
+        <ngx-charts-bar-horizontal [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+            [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+            [legendPosition]="legendPosition">
+        </ngx-charts-bar-horizontal>
+    </div>
+</div>
